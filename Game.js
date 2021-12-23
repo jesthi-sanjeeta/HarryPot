@@ -55,6 +55,12 @@ class Game{
           textSize(25);
           text(allPlayers[plr].name ,x-25,y+25);
         }
+        textSize(25);
+                         fill("white");
+                         text("Player 1 :" +allPlayers.player1.score,50,50);
+                        text("Player 2 :" + allPlayers.player2.score, 50, 100);
+                        text("Player 3 :" +allPlayers.player3.score,50,150);
+                        text("Player 4 :" + allPlayers.player4.score, 50, 200);
         //fill("white");
         //text(allPlayers[plr].name+ " score : "+allPlayers[plr].score,400,30 );
        }
@@ -160,6 +166,7 @@ class Game{
                       player.updatePlayerInfo();
                       //dangerGroup.get(i).destroy();
                       console.log(i);
+                      gameState=2
                     }
                 }
                 for(var i=0; i< houseGrp.length;i++){
@@ -188,7 +195,7 @@ class Game{
       //text("Player 4 :"+allPlayers.player4.score, 20,700);
       //if(players.isTouching(dangerGroup)){
        // console.log("Game End")
-       for(var i=0; i< dangerGroup.length;i++){
+       /*for(var i=0; i< dangerGroup.length;i++){
         if(dangerGroup.get(i).isTouching(players)){
           dangerGroup.get(i).destroy();
           player.score = player.score--;
@@ -196,7 +203,7 @@ class Game{
         //updateGameState(2);
         gameState=2
       }
-    }
+    }*/
             drawSprites();
     }
 
